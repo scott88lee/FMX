@@ -3,7 +3,7 @@
 First GA - Game project
 ============================
 Description:
-Players buy and sell commodities in a realtime marketplace in an attempt to beat inflation!
+Players buy and sell commodities in a realtime marketplace in an attempt to beat the market!
 
 
 MVP:

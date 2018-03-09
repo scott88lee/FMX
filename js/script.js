@@ -11,16 +11,40 @@ var displayCapital = document.getElementById('capital');
 var displayPrice = document.getElementById('price');
 var displayInterval = document.getElementById('interval');
 var displayDirection = document.getElementById('direction');
+var btnBuy = document.getElementById('btnBuy');
+var btnSell = document.getElementById('btnSell');
+
+//Add Listeners
+btnBuy.addEventListener('click',function(){buy()});
+btnSell.addEventListener('click',function(){sell()});
+
 
 function randomDuration(){
-	var duration = Math.floor(Math.random() * Math.floor(12));
+	var duration = Math.floor(Math.random() * Math.floor(15));
 	return duration;	 //Generates random interval
 }
-
 function priceJump() { //Generates the price move amount
-	var priceMove = Math.floor(Math.random() * Math.floor(10))/10;
-	return priceMove;
+	min = Math.ceil(1);
+	max = Math.floor(11);
+	var value = Math.floor(Math.random() * (max - min)) + min;
+	//The maximum is exclusive and the minimum is inclusive
+	value = value / 10;
+	console.log(value);
+	return value;
 }
+function buy(){
+	console.log("BUY!!!!!!!!!!");
+	capital -= commPrice;
+	capital = Math.round(capital * 1000)/1000;
+	//BUY!
+}
+function sell(){
+	console.log("SELLL!!!!!!!!");
+	capital += commPrice;
+	capital = Math.round(capital * 1000)/1000;
+	//SELL!
+}
+
 
 function updateDisplay() {
 	displayDirection.innerText = direction;
@@ -39,10 +63,14 @@ function updateDisplay() {
 
 	if ( direction === true){
 		commPrice += priceJump();
+		commPrice = Math.round(commPrice * 1000)/1000;
 	} else {
 		commPrice -= priceJump();
+		commPrice = Math.round(commPrice * 1000)/1000;		
 	}
-
+	if (capital === 0){			//STOPS THE GAME WHEN NO MONEY
+		clearInterval(myVar);
+	}
 }
 
-setInterval(updateDisplay,speed);
+var myVar = setInterval(updateDisplay,speed);
