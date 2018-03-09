@@ -7,7 +7,6 @@ Players buy and sell commodities in a realtime marketplace in an attempt to beat
 
 
 MVP:
-
 Commoditiy:
 Price
 Increase or decrease continuously for a rand(0-9) times, for a random amount but narrower range
