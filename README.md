@@ -36,3 +36,18 @@ Realtime? or Turn based
 More exiting realtime
 
 SetInterval - Loop prices
+
+----------
+Proposed features:
+Limit orders
+Stoploss
+Program in price trends
+
+Story-line - You loaned the money.
+Buy car
+Buy Mansion
+Buy Yaught
+Buy G5 G6 - integrate into Level and outflow
+
+
+

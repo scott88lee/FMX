@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	background-color: #404040;
+	background-image: url("../img/background.jpg");							;
+}
+
+main {
+	width: 98%;
+	margin: 0 auto;
+	color: white;
+	background-color: rgba(64,64,64,0.5);
+}
+
+h1 {
+	margin: 2px;
+}
+
+#avatar {
+	height: 48px;
+	width: 48px;
+	border-radius: 50px;
+}
+
+.logo {
+	display: inline-block;
+	width: 30%;
+}
+
+#stats {
+	display: inline-block;
+	width: 66%;
+	text-align: right;
+}
+
+#chartWindow {
+	display: inline-block;
+	width: 65%;
+}
+
+#hud {
+	display: inline-block;
+	width: 20%
+	margin: 5px;
+}
+
+#btnBuy {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 26px;
+  background: #3cbd1c;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#btnBuy:hover {
+  background: #52db2c;
+  text-decoration: none;
+}
+
+#btnSell {
+  background: #cf3636;
+  background-image: -webkit-linear-gradient(top, #cf3636, #de1d36);
+  background-image: -moz-linear-gradient(top, #cf3636, #de1d36);
+  background-image: -ms-linear-gradient(top, #cf3636, #de1d36);
+  background-image: -o-linear-gradient(top, #cf3636, #de1d36);
+  background-image: linear-gradient(to bottom, #cf3636, #de1d36);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 26px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#btnSell:hover {
+  background: #e64e4e;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+    #chartWindow {
+	display: inline-block;
+	width: 90%;
+}
+}

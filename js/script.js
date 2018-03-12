@@ -1,8 +1,8 @@
 //Declaring Variables
 var commPrice = 100;
 var difficulty = 1; // 1-Easy 2-Medium 3-Hard
-var speed = 500; // Milliseconds
-var capital = 100000;
+var speed = 400; // Milliseconds
+var capital = 10000;
 var interval = 0;
 var direction = true;
 
@@ -18,9 +18,45 @@ var btnSell = document.getElementById('btnSell');
 btnBuy.addEventListener('click',function(){buy()});
 btnSell.addEventListener('click',function(){sell()});
 
+//Chart
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: [" ", " "],
+        datasets: [{
+            label: "Price",
+            backgroundColor: 'rgba(255, 255, 255, 0.5)',
+            borderColor: 'rgb(222,222,222)',
+            data: [100,100.1],
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+         legend: {
+            display: false
+         },
+         tooltips: {
+            enabled: false
+         }
+    }
+});
+//chart
+
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
 
 function randomDuration(){
-	var duration = Math.floor(Math.random() * Math.floor(15));
+	var duration = Math.floor(Math.random() * Math.floor(18));
 	return duration;	 //Generates random interval
 }
 function priceJump() { //Generates the price move amount
@@ -51,6 +87,7 @@ function updateDisplay() {
 	displayInterval.innerText = interval;
 	displayPrice.innerText = commPrice;
 	displayCapital.innerText = capital;
+	addData(chart, " ", commPrice)
 	capital--;
 	interval--;
 	if (interval <= 0){
@@ -68,9 +105,15 @@ function updateDisplay() {
 		commPrice -= priceJump();
 		commPrice = Math.round(commPrice * 1000)/1000;		
 	}
+	if (chart.data.datasets[0].data.length > 88){
+    	chart.data.datasets[0].data.shift();
+    	chart.data.labels.shift();
+    }
+
 	if (capital === 0){			//STOPS THE GAME WHEN NO MONEY
 		clearInterval(myVar);
 	}
+
 }
 
 var myVar = setInterval(updateDisplay,speed);
