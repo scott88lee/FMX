@@ -1,7 +1,7 @@
 //Declaring Variables
 var commPrice = 100;
 var difficulty = 1;		// 1-Easy 2-Medium 3-Hard
-var speed = 500; 		// Milliseconds
+var speed = 400; 		// Milliseconds
 var capital = 1000;
 var botAvail = 1000;
 var interval = 0; 		// Interval before direction change
@@ -21,6 +21,7 @@ var botCost = [];
 var trendCounter = 0;
 var comparator = [0,100];
 var sellCounter = 0;
+var agro = 2;
 
 
 //Shorten DOM calls
@@ -162,7 +163,7 @@ function runningPNL(){
 	rPNL = Math.round(rPNL * 100)/100;
 	displayrPNL.innerText = rPNL;
 }
-function botThink(){
+function botThink1(arg){
 	//set currentPrice to comparator
 	comparator.push(commPrice); // [0,100,99]
 
@@ -172,8 +173,10 @@ function botThink(){
 	}
 
 	if (trendCounter >= 8 && comparator[2]>comparator[1]) {
-		console.log("TRIGGER BOT-BUY!!!!!!");
-		sellCounter +=4;
+		for (var i = 0; i < arg; i++){
+			buy();
+		}
+		sellCounter +=5;
 		trendCounter = 0;
 	}
 
@@ -183,12 +186,19 @@ function botThink(){
 
 	comparator.shift();
 
-
-	if (sellCounter > 0) {
+	if (sellCounter > 1) {
 		sellCounter--;
-	} else if ( sellCounter = 1) {
-		//console.log("TRIGGER BOT-SELL!!!!!");
+	} else if ( sellCounter === 1) {
+		for (var i = 0; i < arg; i++){
+			sell();
+			calAgro();
+		}
 		sellCounter = 0;
+	}
+}
+function calAgro(){
+	if (capital > 1000) {
+		agro = Math.round(capital/300);
 	}
 }
 
@@ -208,7 +218,8 @@ function updateDisplay() {
 	//difficulty();
 	cal50ma();
 	cal10ma();
-	botThink();
+	botThink1(agro);
+
 
 	addData(chart, " ", commPrice)
 
