@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FOMO</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>FMX markets - Trading game</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -10,34 +9,58 @@
 	<div class = "header">
 
 	<div class = "logo">
-	<img src="img/logo.png">
+	<img id = "logo" src="img/logo.png">
 	</div>
 
 	<div id = "stats">
-	Welcome User. <img id = "avatar" src="img/avatar.jpg">
+		<img id = "avatar" src="img/avatar.jpg">
 	</div>
 	</div>
-
-
 
 	<div>
-	<div id="chartWindow">
-	<canvas id="myChart"></canvas></div>
+		<div id="chart-window">
+			<canvas id="myChart"></canvas>
+			<span class = "chart-text" id = "chart-label">Price range:</span>
+			<span class = "chart-text">High</span>
+			<span class = "chart-text" id = "maxPrice">100</span>
+			<span class = "chart-text">Low</span>
+			<span class = "chart-text" id = "minPrice">100</span>
+			<span class = "chart-text">Moving Averages:</span>
+			<span class = "chart-text">10MA - </span>
+			<span class = "chart-text" id = "ma10">100</span>
+			<span class = "chart-text">50MA - </span>
+			<span class = "chart-text" id = "ma50">100</span>
+		</div>
 
-	<div id ="hud">
-			<h2>Capital:</h2>
-			<h3 id="capital"></h3>
-			<h2>Price of manure:</h2>
-			<h3 id="price"></h3>
-			<h2>Direction Interval:</h2>
-			<h3 id="interval">3</h3>
-			<h2>Direction (true is up):</h2>
-			<h3 id="direction">3</h3>
-	</div>
-	</div>
+		<div id ="hud">
+			<div id = "player">
+				<div class = "label">Capital:</>
+				<div class = 'content' id="capital"></div>
+				<div class = "label">Price of gold:</div>
+				<div class = 'content' id="price"></div>
+				<div class = "label">Total cost	:</div>
+				<div class = 'content' id="asset">0</div>
+				<div class = "label">Holdings:</div>
+				<div class = 'content' id="holdings">0</div>
+				<div class = "label">Running P/L:</div>
+				<div class = 'content' id="rPNL">0</div>
+				<button id = "btnBuy">Buy</button>
+				<button id = "btnSell">Sell</button>
+				</div>
+			</div>
+			<div id = "bot">
+				<div class = "label">Available to trade:</>
+				<div class = 'content' id="botAvail"></div>
+				<div class = "label">Total Cost:</div>
+				<div class = 'content' id="botAsset">0</div>
+				<div class = "label">Holdings:</div>
+				<div class = 'content' id="botHoldings">0</div>
+				<div class = "label">Running P/L:</div>
+				<div class = 'content' id="botRPNL">0</div>
+			</div>
 
-	<button id = "btnBuy">Buy</button>
-	<button id = "btnSell">Sell</button>
+		</div>
+
 
 </main>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
