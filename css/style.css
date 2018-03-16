@@ -16,13 +16,12 @@ h1 {
 }
 
 .header {
+	position: relative;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	border-radius: 18px;
 	background-color: rgba(64,64,64,0.5);
 }
-
-
 #avatar {
 	height: 48px;
 	width: 48px;
@@ -51,7 +50,18 @@ h1 {
 	width: 60px;
 }
 
+.top-price {
+	margin-left: 200px;
+	position: absolute;
+	top: 15px;
+	display: inline-block;
+	font-family: helvetica;
+	font-weight: 400;
+	font-size: 24px;
+}
+
 #logo {
+	display: inline-block;
 	margin-left: 8px;
 	margin-top: 5px;
 }
@@ -73,13 +83,15 @@ h1 {
 	height: 400px;
 	background-color: rgba(64,64,64,0.5);
 }
-#player {
-	margin: 10px;
-}
-#bot {
-	margin-left: 10px;
-}
 
+.bot {
+	padding:8px;
+	display: inline-block;
+	width: 130px;
+	margin: 5px;
+	background-color: grey;
+	border-radius: 5%;
+}
 
 #hud {
 	padding: 10px;
@@ -125,7 +137,6 @@ h1 {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   border-color: #424242;
-  margin-left:20px;
 }
 
 #btnSell:hover {
