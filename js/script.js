@@ -1,6 +1,6 @@
 //Declaring Variables
 var commPrice = 100;
-var speed = 50; 			// Game speed in miliseconds
+var speed = 400; 			// Game speed in miliseconds
 var interval = 0; 			// Interval before direction change
 var direction = true; 		// Price up or Down
 
