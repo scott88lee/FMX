@@ -22,10 +22,8 @@ body {
 	background-color: rgba(64,64,64,0.5);
 	border-radius: 18px;
 	margin-right: 6px;
-  margin-left: -3px;
-	padding-left: 10px;
-  padding-right: 15px;
-  padding-top: 28px;
+	margin-left: -3px;
+	padding-top: 28px;
 }
 
 #botWindow {
@@ -34,7 +32,7 @@ body {
 }
 
 #main {
-	height: 400px;
+
 }
 
 #btnBuy {
