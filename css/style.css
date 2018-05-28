@@ -2,19 +2,11 @@ body {
 	margin: 0;
 	background-color: #404040;
 	background-image: url("../img/background.jpg");
-	font-family: Arial;						;
-}
-
-main {
-	width: %;
-	margin: 0 auto;
+	font-family: Arial;
 	color: white;
 }
 
-h1 {
-	margin: 2px;
-}
-
+/*Top bar styling*/
 .header {
 	position: relative;
 	margin-top: 20px;
@@ -22,15 +14,35 @@ h1 {
 	border-radius: 18px;
 	background-color: rgba(64,64,64,0.5);
 }
+
+#logo {
+	margin-left: 8px;
+	margin-top: 3px;
+}
+
+.top-price {
+	margin-left: 20px;
+	position: absolute;
+	top: 15px;
+	display: inline-block;
+	font-family: helvetica;
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.buttons {
+	margin-left: 250px;
+}
+
 #avatar {
+	float: right;
 	height: 48px;
 	width: 48px;
 	border-radius: 50px;
-	margin-bottom: 5px;
+	margin-top: 8px;
+	margin-right: 8px;
 }
-.chart-text {
-	margin-left: 6px;
-}
+/*top bar END*/
 
 #maxPrice {
 	color: rgb(188,255,188);
@@ -43,27 +55,6 @@ h1 {
 }
 #ma50 {
 	color: rgb(255,255,180);
-}
-
-.logo {
-	display: inline-block;
-	width: 60px;
-}
-
-.top-price {
-	margin-left: 200px;
-	position: absolute;
-	top: 15px;
-	display: inline-block;
-	font-family: helvetica;
-	font-weight: 400;
-	font-size: 24px;
-}
-
-#logo {
-	display: inline-block;
-	margin-left: 8px;
-	margin-top: 5px;
 }
 
 #stats {
