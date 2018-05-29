@@ -21,8 +21,6 @@
 		<img id = "avatar" src="img/avatar.jpg">
 	</div>
 	</div>
-
-	<div>
 		<div id="chart-window">
 			<canvas id="myChart"></canvas>
 			<span class = "chart-text" id = "chart-label">Price range:</span>
@@ -37,10 +35,10 @@
 			<span class = "chart-text" id = "ma50">100</span>
 		</div>
 
-		<div id ="hud">
-			<div>
+	<div class ="hud">
+		<div class = "bot-container">	
 			<div class = "bot">
-				<div class = "label">Player 1 Capital:</>
+				<div class = "label">Player Capital:</div>
 				<div class = 'content' id="capital">1000</div>
 				<div class = "label">Total cost	:</div>
 				<div class = 'content' id="cost">0</div>
@@ -48,10 +46,10 @@
 				<div class = 'content' id="holdings">0</div>
 				<div class = "label">Running P/L:</div>
 				<div class = 'content' id="rPNL">0</div>
-				</div>
 			</div>
+			
 			<div class = "bot">
-				<div class = "label">Fixed Exit bot:</>
+				<div class = "label">Safe bot:</div>
 				<div class = 'content' id="capital1">1000</div>
 				<div class = "label">Total Cost:</div>
 				<div class = 'content' id="cost1">0</div>
@@ -60,10 +58,10 @@
 				<div class = "label">Running P/L:</div>
 				<div class = 'content' id="rPNL1">0</div>
 			</div>
-			</div>
-			<div>
+			
+			
 			<div class = "bot">
-				<div class = "label">Greedy bot:</>
+				<div class = "label">Greedy bot:</div>
 				<div class = 'content' id="capital2">1000</div>
 				<div class = "label">Total Cost:</div>
 				<div class = 'content' id="cost2">0</div>
@@ -71,9 +69,10 @@
 				<div class = 'content' id="holdings2">0</div>
 				<div class = "label">Running P/L:</div>
 				<div class = 'content' id="rPNL2">0</div>
-			</div></div>
+			</div>
+			
 			<div class = "bot">
-				<div class = "label">Var Exit bot:</>
+				<div class = "label">Variable bot:</div>
 				<div class = 'content' id="capital3">1000</div>
 				<div class = "label">Total Cost:</div>
 				<div class = 'content' id="cost3">0</div>
@@ -82,10 +81,12 @@
 				<div class = "label">Running P/L:</div>
 				<div class = 'content' id="rPNL3">0</div>
 			</div>
+			<div>
+				<button id = "btnBuy">Buy</button>
+				<button id = "btnSell">Sell</button>
 			</div>
-		</div>				
-			<button id = "btnBuy">Buy</button>
-			<button id = "btnSell">Sell</button>
+		</div>
+	</div>
 </main>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>

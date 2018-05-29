@@ -85,15 +85,21 @@ h1 {
 }
 
 .bot {
-	padding:8px;
+	padding: 8px;
 	display: inline-block;
 	width: 130px;
-	margin: 5px;
+	margin: 8px;
 	background-color: grey;
 	border-radius: 5%;
 }
 
-#hud {
+.bot-container {
+	margin: auto;
+	width: 100%;
+}
+
+.hud {
+	margin-left: 10px;
 	padding: 10px;
 	border-radius: 18px;
 	display: inline-block;
@@ -151,9 +157,9 @@ h1 {
 		height: auto;
 		margin-bottom: 5px;
 	}
-	#hud {
+	.hud {
 		width: 94%;
-		height: auto;
+		height: 400px;
 	}
 
 }
