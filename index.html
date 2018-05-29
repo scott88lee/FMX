@@ -81,14 +81,29 @@
 				<div class = "label">Running P/L:</div>
 				<div class = 'content' id="rPNL3">0</div>
 			</div>
-			<div>
+			<div class="butt">
 				<button id = "btnBuy">Buy</button>
 				<button id = "btnSell">Sell</button>
 			</div>
 		</div>
 	</div>
 </main>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	  <script>
+  function resize(){    
+    $("#myChart").outerHeight($(window).height()-$("#myChart").offset().top- Math.abs($("#myChart").outerHeight(true) - $("#myChart").outerHeight()));
+  }
+  $(document).ready(function(){
+    resize();
+    $(window).on("resize", function(){                      
+        resize();
+    });
+  });
+  </script>
 </body>
 </html>s
