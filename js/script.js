@@ -29,7 +29,7 @@ var player = [
 		trendCounter : 0,
 		comparator : [0,100],
 		sellCounter : 0,
-		memory : [5,8],
+		memory : [3,8],
 		agro : 2
 	},
 	{
@@ -41,7 +41,7 @@ var player = [
 		trendCounter : 0,
 		comparator : [0,100],
 		sellCounter : 0,
-		memory : [4,2],
+		memory : [4,3],
 		agro : 2
 	},
 	{
@@ -53,7 +53,7 @@ var player = [
 		trendCounter : 0,
 		comparator : [0,100],
 		sellCounter : 0,
-		memory : [0,0],
+		memory : [3,5],
 		agro : 2
 	}
 ];
@@ -225,14 +225,14 @@ function bot(arg,id){					//		   BOT CODE  	//	   (0 0)
 	player[id].comparator.push(commPrice); // [0,100,99]		//  //| o=o |\\  
 																// <] | o=o | [>	  
 	if (player[id].comparator[1] > player[id].comparator[2]) {	//	  \=====/
-		player[id].trendCounter++;								//     *****  						//    
-	}
+		player[id].trendCounter++; //Counts the downtrend		//     ***** 
+	}															//    
 
 	if (player[id].trendCounter >= player[id].memory[1] && player[id].comparator[2]>player[id].comparator[1]) {
-		for (var i = 0; i < arg; i++){
-			buy(id);
+		for (var i = 0; i < arg; i++){   //if TrendCount exceeds player limit [1]  && price TURNS around
+			buy(id);					 //FUCKING BUY!!!!!!!  i is the number of units based on bot agro
 		}
-		player[id].sellCounter += player[id].memory[0];
+		player[id].sellCounter += player[id].memory[0];  //sell counter memory[0]
 		player[id].trendCounter = 0;
 	}
 
@@ -276,6 +276,7 @@ function game() {
 
 	bot(player[1].agro,1);
 	bot(player[2].agro,2);
+	bot(player[3].agro,3);
 
 
 ///////////////////////////////////////////////////////////

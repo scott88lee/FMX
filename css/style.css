@@ -71,20 +71,26 @@ body {
 	border-radius: 18px;
 	display: inline-block;
 	width: 60%;
-	height: 400px;
+	height: auto;
 	background-color: rgba(64,64,64,0.5);
 }
 
 .bot {
-	padding:8px;
+	padding: 8px;
 	display: inline-block;
 	width: 130px;
-	margin: 5px;
+	margin: 8px;
 	background-color: grey;
 	border-radius: 5%;
 }
 
-#hud {
+.bot-container {
+	margin: auto;
+	width: 100%;
+}
+
+.hud {
+	margin-left: 10px;
 	padding: 10px;
 	border-radius: 18px;
 	display: inline-block;
@@ -92,6 +98,10 @@ body {
 	height: 400px;
 	background-color: rgba(64,64,64,0.5);
 	vertical-align: top;
+}
+
+.butt {
+	margin-left: 5px;
 }
 
 #btnBuy {
@@ -102,7 +112,7 @@ body {
   color: #ffffff;
   font-size: 26px;
   background: #3cbd1c;
-  padding: 10px 20px 10px 20px;
+  padding: 8px 18px 8px 18px;
   text-decoration: none;
   border-color: #424242;
 }
@@ -125,7 +135,7 @@ body {
   font-family: Arial;
   color: #ffffff;
   font-size: 26px;
-  padding: 10px 20px 10px 20px;
+  padding: 8px 18px 8px 18px;
   text-decoration: none;
   border-color: #424242;
 }
@@ -142,9 +152,9 @@ body {
 		height: auto;
 		margin-bottom: 5px;
 	}
-	#hud {
+	.hud {
 		width: 94%;
-		height: auto;
+		height: 400px;
 	}
 
 }
