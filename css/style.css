@@ -3,10 +3,18 @@ body {
 	background-color: #404040;
 	background-image: url("../img/background.jpg");
 	font-family: Arial;
+}
+
+main {
+	width: 98%;
+	margin: 0 auto;
 	color: white;
 }
 
-/*Top bar styling*/
+h1 {
+	margin: 2px;
+}
+
 .header {
 	position: relative;
 	margin-top: 20px;
@@ -14,35 +22,15 @@ body {
 	border-radius: 18px;
 	background-color: rgba(64,64,64,0.5);
 }
-
-#logo {
-	margin-left: 8px;
-	margin-top: 3px;
-}
-
-.top-price {
-	margin-left: 20px;
-	position: absolute;
-	top: 15px;
-	display: inline-block;
-	font-family: helvetica;
-	font-weight: 400;
-	font-size: 24px;
-}
-
-.buttons {
-	margin-left: 250px;
-}
-
 #avatar {
-	float: right;
 	height: 48px;
 	width: 48px;
 	border-radius: 50px;
-	margin-top: 8px;
-	margin-right: 8px;
+	margin-bottom: 5px;
 }
-/*top bar END*/
+.chart-text {
+	margin-left: 6px;
+}
 
 #maxPrice {
 	color: rgb(188,255,188);
@@ -55,6 +43,27 @@ body {
 }
 #ma50 {
 	color: rgb(255,255,180);
+}
+
+.logo {
+	display: inline-block;
+	width: 60px;
+}
+
+.top-price {
+	margin-left: 200px;
+	position: absolute;
+	top: 15px;
+	display: inline-block;
+	font-family: helvetica;
+	font-weight: 400;
+	font-size: 24px;
+}
+
+#logo {
+	display: inline-block;
+	margin-left: 8px;
+	margin-top: 5px;
 }
 
 #stats {
