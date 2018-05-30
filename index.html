@@ -94,16 +94,5 @@
   crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-	  <script>
-  function resize(){    
-    $("#myChart").outerHeight($(window).height()-$("#myChart").offset().top- Math.abs($("#myChart").outerHeight(true) - $("#myChart").outerHeight()));
-  }
-  $(document).ready(function(){
-    resize();
-    $(window).on("resize", function(){                      
-        resize();
-    });
-  });
-  </script>
 </body>
-</html>s
+</html>

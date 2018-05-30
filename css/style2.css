@@ -1,0 +1,77 @@
+body {
+	background-color: #404040;
+	background-image: url("../img/background.jpg");
+	font-family: Arial;
+	color: white;
+}
+
+.stats {
+	margin-left: 30px;
+}
+
+#header {
+	height: 68px;
+	border-radius: 18px;
+	margin-top: 18px;
+	margin-bottom: 15px;
+	padding: 6px;
+	background-color: rgba(64,64,64,0.5);
+}
+
+#chartWindow {
+	background-color: rgba(64,64,64,0.5);
+	border-radius: 18px;
+	margin-right: 6px;
+	margin-left: -3px;
+	padding-top: 28px;
+}
+
+#botWindow {
+	border-radius: 18px;
+	background-color: rgba(64,64,64,0.5);
+}
+
+#main {
+
+}
+
+#btnBuy {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 22px;
+  background: #3cbd1c;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  border-color: #424242;
+}
+
+#btnBuy:hover {
+  background: #52db2c;
+  text-decoration: none;
+}
+
+#btnSell {
+  background: #cf3636;
+  background-image: -webkit-linear-gradient(top, #cf3636, #de1d36);
+  background-image: -moz-linear-gradient(top, #cf3636, #de1d36);
+  background-image: -ms-linear-gradient(top, #cf3636, #de1d36);
+  background-image: -o-linear-gradient(top, #cf3636, #de1d36);
+  background-image: linear-gradient(to bottom, #cf3636, #de1d36);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  border-color: #424242;
+}
+
+#btnSell:hover {
+  background: #e64e4e;
+  text-decoration: none;
+}
