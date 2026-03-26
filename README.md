@@ -1,53 +1,28 @@
-============================
-# FOMO
-First GA - Game project
-============================
-Description:
-Players buy and sell commodities in a realtime marketplace in an attempt to beat the market!
+# FMX Markets - Trading Game
 
+A browser-based commodities trading game where players buy and sell in a simulated market, trying to beat the market before time runs out.
 
-MVP:
-Commoditiy:
-Price
-Increase or decrease continuously for a rand(0-9) times, for a random amount but narrower range
-Upwards bias, or else price will go to zero
+**Play:** https://scott88lee.github.io/FMX
 
+## Gameplay
 
-Capital:
-Decreasing. fix value - Easy
-			fix percentage - Medium
-			high percentage - Hard
+- Watch live price action with candlestick charts and moving averages (10 MA, 50 MA)
+- Buy and sell commodities using your starting capital
+- Price cycles through macro bull and bear phases with realistic volatility
+- Beat the market before your capital runs out
 
-Mechanics:
-Buy - Qty - Price
-Sell - Qty - Price
+## Versions
 
-At scale
-More commodities
-Cookies
-News
+| Version | File | Notes |
+|---------|------|-------|
+| v3 | `index.html` | Candlestick chart, redesigned UI, macro price cycles |
+| v2 | `v2.html` | Line chart |
+| v1 | `v1.html` | Original |
 
-High-score
+## Roadmap
 
-----------
-UX - Gameplay
-
-Realtime? or Turn based
-More exiting realtime
-
-SetInterval - Loop prices
-
-----------
-Proposed features:
-Limit orders
-Stoploss
-Program in price trends
-
-Story-line - You loaned the money.
-Buy car
-Buy Mansion
-Buy Yaught
-Buy G5 G6 - integrate into Level and outflow
-
-
-
+- Limit orders & stop-loss
+- Multiple commodities
+- News events
+- High score board
+- Story mode (loan mechanic, milestone purchases)
